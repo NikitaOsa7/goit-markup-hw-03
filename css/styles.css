@@ -86,8 +86,8 @@ img {
   margin: -1px;
 }
 
-.menu-link:hover
-.menu-link:focus
+.menu-link:hover,
+.menu-link:focus,
 .menu-link.current {
   color: var(--accent-color);
 }
@@ -137,6 +137,10 @@ header {
   margin-right: 50px;
 }
 
+.connect-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .menu-link {
   font-weight: 500;
   font-size: 14px;
@@ -153,9 +157,11 @@ header {
 
 .header-connect {
   margin-left: auto;
+  align-items: center;
+  display: flex;
 }
 
-.header-mail {
+.connect-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -164,22 +170,9 @@ header {
   color: var(--primary-text-color);
 }
 
-.header-tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 
-  color: var(--primary-text-color);
-}
-
-.header-mail:hover,
-.header-mail:focus {
-  color: var(--accent-color);
-}
-
-.header-tel:hover,
-.header-tel:focus {
+.connect-link:hover,
+.connect-link:focus {
   color: var(--accent-color);
 }
 
@@ -211,6 +204,7 @@ header {
   border-radius: 4px;
   display: block;
   margin: 0 auto;
+  border: transparent;
 
   margin-top: 30px;
 }
@@ -336,7 +330,7 @@ header {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
-  display: flex;
+  display: block;
   margin-bottom: 20px;
 
   letter-spacing: 0.03em;
@@ -379,6 +373,9 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  border:transparent;
+  border-radius: 4px;
+  height: 38px;
 
   text-align: center;
   letter-spacing: 0.03em;
@@ -388,7 +385,7 @@ header {
 
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  background-color: var(--secondary-background-color);
+  background-color:var(--accent-color);
   color
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -420,13 +417,14 @@ header {
 
 .menu-list-buttons {
   display: flex;
+  margin-bottom: 50px;
+  
   
   justify-content: center;
 }
 
 .menu-buttons {
   margin-right: 8px;
-  margin-bottom: 50px;
 }
 
 .menu-buttons:last-child {
@@ -437,11 +435,11 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
-  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .example-list-item { 
-  margin top: 30px; 
+  margin-top: 30px; 
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
 }
